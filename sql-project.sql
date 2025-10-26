@@ -1,29 +1,29 @@
-CREATE  TABLE  Coursee (
+CREATE  TABLE  Courses (
 Course_id INT PRIMARY KEY,
 Course_name VARCHAR(50) NOT NULL,
 Duration VARCHAR(20),
 Fees INT
 );
 
-SELECT* FROM Coursee;
+SELECT* FROM Courses;
 INSERT INTO Coursee (Course_id, Course_name, Duration, Fees)
 VALUES
 (1, 'Java Programming', '3 months', 15000),
 (2, 'Web Development', '4 months', 20000),
 (3, 'Data Science', '6 months', 30000),
 (4, 'machine learning', '5 months', 25000);
-SELECT * FROM Coursee;
+SELECT * FROM Courses;
 INSERT INTO Coursee (Course_id, Course_name, Duration, Fees)
 VALUES
 (5, 'Cloud Computing', '4 months', 22000),
 (6, 'Cyber Security', '3 months', 18000);
-SELECT * FROM Coursee;
+SELECT * FROM Courses;
 
-INSERT INTO Coursee (Course_id, Course_name, Duration, Fees)
+INSERT INTO Courses (Course_id, Course_name, Duration, Fees)
 VALUES
 (7, 'DevOps', '4 months', 24000),
 (8, 'UI/UX Design', '3 months', 16000);
-SELECT * FROM Coursee;  
+SELECT * FROM Courses;  
 
 create TABLE DEPARTMENTS(
 Dept_id INT PRIMARY KEY,
@@ -219,5 +219,5 @@ INNER JOIN Appointments a ON p.Patient_id = a.Patient_id
 WHERE a.fee = (SELECT MAX(fee) FROM Appointments);  
 
 --suppose the appointments table was crieated without a foreign key linking to patients.now,add a foreign key constraint to ensure every patients_id in appointments must exist in patients table.
-ALTER TABLE Appo
+ALTER TABLE Appointment 
 .
